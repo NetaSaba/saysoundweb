@@ -36,6 +36,35 @@ const uiText = {
         ja: '音声の著作権は保有しておらず、二次創作支援を目的としています。',
         zh: '不擁有音效版權，僅為二次創作提供服務。',
         en: 'We do not own the sound copyrights. This is a fan-made project.'
+    },
+    aboutSection: {
+        ja: {
+            lhtml: `
+              <h4>MameKuroとは？</h4>
+              <p>MameKuroは <a href="https://w.atwiki.jp/umesaba" target="_blank">Mameiro</a> と 
+              <a href="https://sites.google.com/view/kuromekuro" target="_blank">KuromeKuro</a> が共同制作したSaysoundプロジェクトで、<br/>
+              様々な音声クリップを収集・共有することを目的としています。<br/>
+              このウェブサイトは、それらのサウンドを検索して再生する便利な方法を提供します。<br/>
+              現在iOSは未対応で、対応を検討中です。</p>`
+        },
+        zh: {
+            lhtml: `
+              <h4>什麼是 MameKuro？</h4>
+              <p>MameKuro 是一個由 <a href="https://w.atwiki.jp/umesaba" target="_blank">Mameiro</a> 和 
+              <a href="https://sites.google.com/view/kuromekuro" target="_blank">KuromeKuro</a> 共同合作的 Saysound 專案，<br/>
+              旨在收集和分享各種聲音片段。<br/>
+              這個網站提供了一個方便的方式來搜尋和播放這些聲音。<br/>
+              目前不支援 iOS，尚在研擬解決方案中。</p>`
+        },
+        en: {
+            lhtml: `
+              <h4>What is MameKuro?</h4>
+              <p>MameKuro is a Saysound project jointly created by 
+              <a href="https://w.atwiki.jp/umesaba" target="_blank">Mameiro</a> and 
+              <a href="https://sites.google.com/view/kuromekuro" target="_blank">KuromeKuro</a>, aiming to collect and share various sound clips.<br/>
+              This site offers a convenient way to search and play these sounds.<br/>
+              iOS is currently not supported, and a solution is under consideration.</p>`
+        }
     }
 };
 function updateUILabels() {
@@ -45,6 +74,7 @@ function updateUILabels() {
     document.getElementById('searchInput').placeholder = uiText.searchPlaceholder[currentLang];
     document.getElementById('mainTitle').textContent = uiText.mainTitle[currentLang];
     document.getElementById('disclaimerText').textContent = uiText.disclaimer[currentLang];
+    document.getElementById('aboutSection').innerHTML = uiText.aboutSection[currentLang].lhtml;
 }
 
 
