@@ -1,0 +1,80 @@
+body {
+    background-color: #121212;
+    color: white;
+}
+
+.sound-card {
+    background-color: #1f1f1f;
+    border-radius: 10px;
+    padding: 1rem;
+    margin: 0.5rem;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+.sound-card:hover {
+    background-color: #2a2a2a;
+}
+
+#notifications {
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: flex-end;
+    padding: 1rem;
+    z-index: 1050;
+}
+
+.audio-popup {
+    background: #222;
+    color: white;
+    margin-top: 0.5rem;
+    padding: 0.5rem;
+    border-radius: 8px;
+    width: 300px;
+}
+
+footer .btn {
+    margin: 0.5rem !important;
+    padding: 0.5rem 0rem !important;
+}
+
+footer small {
+    color: #4d4d53 !important;
+}
+
+footer {
+    padding: 1rem;
+    background: transparent !important;
+}
+
+.footer-with-bg {
+    position: relative;
+    overflow: hidden;
+    background: #222;
+    color: #eee;
+    text-align: center;
+    padding: 2rem 1rem;
+    border-top: 1px solid #444;
+}
+
+.footer-with-bg .footer-bg {
+    position: absolute;
+    inset: 0;
+    background-image: url('images/Hollen9LOGOFULL_216x60.png');
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: 216px 60px;
+    opacity: 0.05;
+    /* 控制圖片淡淡的程度 */
+    pointer-events: none;
+    /* 避免擋住按鈕點擊 */
+    z-index: 0;
+}
+
+.footer-with-bg .footer-content {
+    position: relative;
+    z-index: 1;
+}
