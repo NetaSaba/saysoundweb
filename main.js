@@ -44,8 +44,7 @@ const uiText = {
               <p>MameKuroは <a href="https://w.atwiki.jp/umesaba" target="_blank">Mameiro</a> と 
               <a href="https://sites.google.com/view/kuromekuro" target="_blank">KuromeKuro</a> が共同制作したSaysoundプロジェクトで、<br/>
               様々な音声クリップを収集・共有することを目的としています。<br/>
-              このウェブサイトは、それらのサウンドを検索して再生する便利な方法を提供します。<br/>
-              現在iOSは未対応で、対応を検討中です。</p>`
+              このウェブサイトは、それらのサウンドを検索して再生する便利な方法を提供します。</p>`
         },
         zh: {
             lhtml: `
@@ -53,8 +52,7 @@ const uiText = {
               <p>MameKuro 是一個由 <a href="https://w.atwiki.jp/umesaba" target="_blank">Mameiro</a> 和 
               <a href="https://sites.google.com/view/kuromekuro" target="_blank">KuromeKuro</a> 共同合作的 Saysound 專案，<br/>
               旨在收集和分享各種聲音片段。<br/>
-              這個網站提供了一個方便的方式來搜尋和播放這些聲音。<br/>
-              目前不支援 iOS，尚在研擬解決方案中。</p>`
+              這個網站提供了一個方便的方式來搜尋和播放這些聲音。</p>`
         },
         en: {
             lhtml: `
@@ -62,8 +60,7 @@ const uiText = {
               <p>MameKuro is a Saysound project jointly created by 
               <a href="https://w.atwiki.jp/umesaba" target="_blank">Mameiro</a> and 
               <a href="https://sites.google.com/view/kuromekuro" target="_blank">KuromeKuro</a>, aiming to collect and share various sound clips.<br/>
-              This site offers a convenient way to search and play these sounds.<br/>
-              iOS is currently not supported, and a solution is under consideration.</p>`
+              This site offers a convenient way to search and play these sounds.</p>`
         }
     }
 };
@@ -167,7 +164,7 @@ function playSound(key) {
 
     const control = document.createElement('audio');
     control.controls = true;
-    control.src = `sounds/${entry.path}.vsnd_c`;
+    control.src = `sounds/${entry.path}.mp3`;
     control.volume = actualVolume;
 
     wrapper.appendChild(label);
@@ -185,7 +182,7 @@ function playSound(key) {
 
     control.addEventListener('error', () => {
         wrapper.remove();
-        console.warn(`Audio load failed: sounds/${entry.path}.vsnd_c`);
+        console.warn(`Audio load failed: sounds/${entry.path}.mp3`);
         label.innerHTML += `<div class="text-danger">*Error*</div>`;
     });
 

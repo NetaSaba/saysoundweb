@@ -398,3 +398,5 @@ FodyWeavers.xsd
 *.sln.iml
 *.bat
 /.credentials
+.DS_Store
+*.sh
